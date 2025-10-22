@@ -1,6 +1,7 @@
 import requests
 import allure
 
+
 key = "51TH40T-TG84KG6-GMDS412-7HDVF8B"
 
 
