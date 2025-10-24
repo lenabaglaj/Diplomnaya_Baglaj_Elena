@@ -1,13 +1,10 @@
 import pytest
 from selenium import webdriver
 
-@pytest.fixture()
-def driver():
-    # Инициализация драйвера
-    browser= webdriver.Firefox()
-    browser.implicitly_wait(50)
-    browser.maximize_window()  # Развернуть окно во весь экран
-    yield browser
-    # Завершение работы драйвера
-    browser.quit()
+@pytest.fixture
+def open_kinopoisk():
+    driver = webdriver.Firefox()
+    driver.get('https://www.kinopoisk.ru/')
+    yield driver
+    driver.quit()
 

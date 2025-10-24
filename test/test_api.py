@@ -12,7 +12,6 @@ def test_movies_2024():
     assert len(response.json()) == 5, f"Expected exactly 5 movies, but got {len(response.json())}"
 
 
-
 @allure.title("Поиск фильмов по ID")
 @allure.description("Ввод ID")
 @allure.severity("critical")
